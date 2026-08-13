@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<body>
+    <h2 id="hoverMe">ลองเอาเมาส์มาชี้ฉันสิ</h2>
+    <input type="text" id="liveInput" placeholder="พิมพ์เพื่อดู event: input" />
+    <p id="counter">0 ตัวอักษร</p>
+    <script>
+        const box = document.getElementById("liveInput");
+        const counter = document.getElementById("counter");
+        box.addEventListener("input", (e) => {
+            counter.textContent = `${e.target.value.length} ตัวอักษร`;
+        });
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("DOM พร้อมใช้งานแล้ว!");
+        });
+    </script>
+</body>
+</html>
